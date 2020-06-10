@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.10)
+project(pcc VERSION 1.0)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED true)
+set(CMAKE_EXE_LINKER_FLAGS "-static")
+add_executable(pcc pcc.c)
+enable_testing()
+add_test(pcc_test bash ${CMAKE_CURRENT_SOURCE_DIR}/test.sh)
